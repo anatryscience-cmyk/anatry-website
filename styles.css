@@ -58,3 +58,59 @@
 html[data-theme="light"] .motion-visual{border-color:#c5d0bd}
 @media(max-width:760px){.hero-science{inset:35% -25% 0 0;opacity:.28;mask-image:linear-gradient(0deg,#000,transparent)}.motion-visual{height:195px!important}}
 @media(prefers-reduced-motion:reduce){.science-motion *, .science-motion, .motion-visual *{animation:none!important;transition:none!important}.ecg-line{stroke-dashoffset:0!important}.ecg-dot{opacity:1!important}}
+/* Readable light appearance throughout the application. */
+html[data-theme="light"] .topbar{background:#f5f2e9f2;color:#183b2e;border-bottom-color:#c7d3c8}
+html[data-theme="light"] .top-left{color:#345e4b}
+html[data-theme="light"] .sidebar .brand,html[data-theme="light"] .sidebar .brand strong{color:#17382b}
+html[data-theme="light"] .navbtn{color:#2c5341}
+html[data-theme="light"] .navbtn:hover{background:#d5e5d7;color:#163b2d}
+html[data-theme="light"] .navbtn.active{background:#b9d3c1;color:#143527}
+html[data-theme="light"] .navlabel{color:#4d6b58}
+html[data-theme="light"] .panel,html[data-theme="light"] .card,html[data-theme="light"] .researcher-card{background:#fff;color:#173b2d;border-color:#cbd6c9}
+html[data-theme="light"] .card p,html[data-theme="light"] .list-item p{color:#506d5c}
+html[data-theme="light"] .field{background:#fff;color:#163b2d;border-color:#9aafa0}
+html[data-theme="light"] .label{color:#244b39}
+html[data-theme="light"] .linebtn{background:#f8faf5;color:#173c2e;border-color:#688777}
+html[data-theme="light"] .linebtn:hover{background:#e1eae0}
+html[data-theme="light"] .pill{background:#e5ede3;color:#24513b;border-color:#a5bca9}
+html[data-theme="light"] .pill.goldpill{color:#705322;border-color:#c4ac77}
+html[data-theme="light"] .category-chip{background:#f3f7f0;color:#204533}
+html[data-theme="light"] .category-chip:hover,html[data-theme="light"] .category-chip.selected{background:#e1e9dd}
+html[data-theme="light"] .modalbox{background:#fff;color:#193b2d;border-color:#b7cbb9}
+html[data-theme="light"] .modalroot.wide-modal .modalbox{background:#f8f8f3}
+html[data-theme="light"] .close{color:#183d2e}
+html[data-theme="light"] .notice{background:#fff8e5;color:#665021;border-color:#d9c58c}
+html[data-theme="light"] .notice.success{background:#e8f5e9;color:#235b35;border-color:#a8c8ae}
+html[data-theme="light"] .tab{color:#284c3a;border-color:#8daa99}
+html[data-theme="light"] .rail{background:#edf2e9}
+html[data-theme="light"] .rail-card{background:#fff;color:#173b2d;border-color:#c8d7c9}
+html[data-theme="light"] .rail-card p,html[data-theme="light"] .rail-card .stat span{color:#526e5d}
+html[data-theme="light"] .rail-card .stat strong{color:#193d2e}
+html[data-theme="light"] .connection{color:#345947}
+html[data-theme="light"] .counterbox{background:#fff;color:#173b2d}
+html[data-theme="light"] .sidefoot .joincard,html[data-theme="light"] .sidefoot .joincard h3{color:#f3f0e6}
+html[data-theme="light"] .sidefoot .joincard p{color:#d4e0d1}
+html[data-theme="light"] .ghostbtn{background:#dce9dc;color:#214936}
+/* Sidebar remains independently scrollable, including Privacy & Safety and Founder Studio. */
+.sidebar{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#6b907a transparent}
+.sidebar .sidefoot{flex-shrink:0;padding-top:22px}
+.sidebar nav{flex-shrink:0}
+/* A discovery feed rather than a repeated two-column tile wall. */
+.research-feed{display:grid;grid-template-columns:minmax(0,1fr);gap:25px;max-width:790px;margin:0 auto}
+.feed-post{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--panel);box-shadow:0 14px 36px #00000013}
+.feed-byline{display:flex;align-items:center;gap:12px;padding:18px 22px}
+.feed-byline>div:nth-child(2){flex:1;min-width:0}
+.feed-byline strong,.feed-byline span{display:block}
+.feed-byline span{font-size:12px;color:var(--muted)}
+.feed-byline .pill{white-space:nowrap}
+.feed-visual{height:260px;overflow:hidden;background:#102f28;position:relative}
+.feed-visual .science-motion{height:100%;min-height:260px;border:0;border-radius:0}
+.feed-copy{padding:24px 28px 27px}
+.feed-copy h3{font:500 clamp(25px,3vw,36px)/1.2 'Playfair Display',serif;margin:0 0 12px}
+.feed-copy p{color:var(--muted);font-size:15px;line-height:1.7}
+.feed-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+html[data-theme="light"] .feed-post{background:#fff;color:#173b2d;border-color:#cbd6c9}
+.submission-preview{border:1px solid var(--line);padding:18px;border-radius:12px;margin:15px 0;background:var(--panel2)}
+.submission-preview h3{font:500 25px 'Playfair Display',serif;margin:8px 0}
+.submission-preview p{color:var(--muted)}
+@media(max-width:760px){.feed-visual{height:210px}.feed-copy{padding:20px}.feed-byline{padding:14px}.research-feed{gap:15px}}
