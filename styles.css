@@ -184,3 +184,6 @@ html[data-theme="light"][data-discipline] .goldbtn{background:var(--gold);color:
 @keyframes course-photo-drift{from{transform:scale(1.02) translateX(-1%)}to{transform:scale(1.13) translateX(1%)}}
 @media(prefers-reduced-motion:reduce){.course-card .course-photo{animation:none}.course-card,.course-card .course-motion,.course-card .course-visit{transition:none}.course-card:hover{transform:none}}
 @media(max-width:740px){.course-card .course-art{height:210px}.course-card .course-content{padding:22px}}
+
+/* Profile identity and optional social accounts */
+.profile-identity{display:flex;align-items:center;gap:18px;margin:18px 0 24px}.profile-avatar-large{display:inline-flex;flex-shrink:0;align-items:center;justify-content:center;width:92px;height:92px;object-fit:cover;border-radius:50%;border:2px solid var(--gold,#c4a369);font:700 32px Georgia,serif}.avatar-fallback{background:var(--green,#153e32);color:#fff}.nav-avatar-image{width:100%;height:100%;object-fit:cover;border-radius:50%}.profile-social-links{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:22px}.profile-social-links h3{width:100%}.profile-identity .tiny{max-width:400px}
