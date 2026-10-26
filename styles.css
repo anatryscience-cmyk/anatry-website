@@ -24,3 +24,37 @@
 
 /* Journal discovery, researcher directory and user appearance */
 .journal-category-browser{margin:24px 0}.category-columns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.category-column h3{font:500 23px 'Playfair Display',serif;margin:0 0 12px}.category-chip{display:block;width:100%;margin:6px 0;padding:9px 12px;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);text-align:left;font-size:13px}.category-chip:hover,.category-chip.selected{border-color:var(--gold);background:var(--panel3)}.researcher-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.researcher-card{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:15px;background:var(--panel2)}.researcher-card p{margin:3px 0 5px}.researcher-avatar{width:43px;height:43px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#143328;font-weight:800;font-size:20px;flex-shrink:0}html[data-theme="light"]{--bg:#f5f2e9;--panel:#ffffff;--panel2:#f0f3ec;--panel3:#e2eadf;--line:#c5d0c5;--ink:#16382d;--muted:#526a5e;--gold:#82642b;--ivory:#f5eddb;--mint:#436c55}html[data-theme="light"] .sidebar{background:#eaf0e8}html[data-theme="light"] .rail-card,html[data-theme="light"] .joincard,html[data-theme="light"] .journal-cover,html[data-theme="light"] .journal-empty{color:#f5f2e9}html[data-theme="light"] .journal-cover p,html[data-theme="light"] .journal-empty p{color:#d6e4d8}html[data-theme="light"] .journal-empty .muted{color:#d6e4d8}html[data-theme="light"] .doc-paper{background:white;color:#1b2e25}html[data-theme="light"] .doc-toolbar{background:#e9e6db}html[data-theme="light"] .source-links a{color:#5b4c29}html[data-theme="light"] .source-links a:hover{background:#edf2e7}@media(max-width:1100px){.category-columns{grid-template-columns:repeat(2,minmax(0,1fr))}.researcher-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.category-columns,.researcher-grid{grid-template-columns:1fr}}
+
+/* Anatry animated science identity: custom vectors, not repetitive photography. */
+.motion-visual{height:215px!important;isolation:isolate;background:radial-gradient(circle at 50% 60%,#285d4e,#071c1c 80%)!important}
+.motion-visual.biology{background:radial-gradient(circle at 55% 50%,#234c4c,#091f23 83%)!important}
+.motion-visual.chemistry{background:radial-gradient(circle at 45% 55%,#54452c,#171d1b 85%)!important}
+.motion-visual.physics{background:radial-gradient(circle at 50% 50%,#253f54,#0b1b27 85%)!important}
+.science-motion{display:block;width:100%;height:100%;overflow:visible;transition:transform .55s cubic-bezier(.2,.8,.2,1);color:#d9bf83}
+.card:hover .science-motion{transform:scale(1.045)}
+.science-caption{font:600 9px 'DM Sans',sans-serif;letter-spacing:1.6px;fill:#c6dfc7;opacity:.68}
+.motion-grid path{stroke:#92bdab;stroke-width:.6;opacity:.14}
+.ecg-glow{stroke:#83e8b8;stroke-width:9;fill:none;opacity:.17;filter:blur(6px)}
+.ecg-line{fill:none;stroke:url(#ecgInk);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:670;stroke-dashoffset:670;animation:ecgTrace 3.7s linear infinite}
+.ecg-dot{fill:#e7cf8c;filter:drop-shadow(0 0 6px #a6ebbe);animation:ecgDot 3.7s linear infinite}
+@keyframes ecgTrace{0%{stroke-dashoffset:670;opacity:.5}15%{opacity:1}80%,100%{stroke-dashoffset:0;opacity:1}}
+@keyframes ecgDot{0%,35%,100%{opacity:.25;transform:scale(.7)}48%,58%{opacity:1;transform:scale(1.6)}}
+.dna-drift{transform-origin:210px 110px;animation:dnaFloat 5s ease-in-out infinite}
+.helix-rung{stroke:#b3d5c0;stroke-width:2;opacity:.48;animation:rungGlow 2.2s ease-in-out infinite}
+.helix-a{fill:#c9ab75;filter:drop-shadow(0 0 3px #c9ab7570)}.helix-b{fill:#83c9b5;filter:drop-shadow(0 0 3px #83c9b570)}
+@keyframes dnaFloat{50%{transform:translateY(-8px) skewX(2deg)}}@keyframes rungGlow{50%{opacity:.95}}
+.molecule-float{transform-origin:210px 115px;animation:moleculeBob 6s ease-in-out infinite}
+.molecule-bonds path{stroke:#d6c9a4;stroke-width:3;stroke-linecap:round;fill:none;opacity:.68}
+.molecule-node{stroke:#f3e7c5;stroke-width:1.5;filter:drop-shadow(0 0 9px #c8b57955)}.molecule-node.n0{fill:#b9cba7}.molecule-node.n1{fill:#e0bb83}.molecule-node.n2{fill:#6ea7a2}
+@keyframes moleculeBob{50%{transform:translateY(-7px) rotate(3deg)}}
+.orbit-track{stroke:#b5c9c7;stroke-width:1.7;fill:none;opacity:.48}.orbit-core{fill:#d7b779;filter:drop-shadow(0 0 17px #dfc18488)}
+.orbit-electron{transform-origin:210px 115px;animation:electronOrbit 5s linear infinite}.orbit-electron circle{fill:#96d6c6;filter:drop-shadow(0 0 7px #96d6c6)}.orbit-two{animation-duration:7s;animation-direction:reverse;transform:rotate(120deg)}
+@keyframes electronOrbit{to{transform:rotate(360deg)}}
+.motion-label{position:absolute;left:17px;bottom:15px;right:17px;display:flex;align-items:center;gap:10px;font-size:10px;font-weight:700;letter-spacing:2.2px;color:#dce8d8}.motion-label-line{height:1px;flex:1;background:linear-gradient(90deg,#cdbb8a77,transparent)}
+.hero{background:linear-gradient(90deg,#09241ff5 0%,#0d2b25ee 48%,#123d3288 100%),radial-gradient(circle at 75% 50%,#3c6d5a,#0c2922 70%)!important}
+.hero-science{position:absolute;inset:0 0 0 39%;opacity:.53;z-index:-1;pointer-events:none;mask-image:linear-gradient(90deg,transparent,#000 30%)}
+.hero-science .science-motion{height:100%;width:100%}
+.hero .eyebrow,.hero h1,.hero p,.hero-actions{position:relative;z-index:1}
+html[data-theme="light"] .motion-visual{border-color:#c5d0bd}
+@media(max-width:760px){.hero-science{inset:35% -25% 0 0;opacity:.28;mask-image:linear-gradient(0deg,#000,transparent)}.motion-visual{height:195px!important}}
+@media(prefers-reduced-motion:reduce){.science-motion *, .science-motion, .motion-visual *{animation:none!important;transition:none!important}.ecg-line{stroke-dashoffset:0!important}.ecg-dot{opacity:1!important}}
