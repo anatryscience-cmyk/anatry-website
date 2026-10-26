@@ -114,3 +114,39 @@ html[data-theme="light"] .feed-post{background:#fff;color:#173b2d;border-color:#
 .submission-preview h3{font:500 25px 'Playfair Display',serif;margin:8px 0}
 .submission-preview p{color:var(--muted)}
 @media(max-width:760px){.feed-visual{height:210px}.feed-copy{padding:20px}.feed-byline{padding:14px}.research-feed{gap:15px}}
+
+/* Discipline-specific palettes: the science theme is independent of light/dark mode. */
+html[data-discipline="medicine"]{--gold:#e66e72;--mint:#ef9ba1;--line:#6c393c;--panel:#291a1e;--panel2:#3a2027;--panel3:#4c2730;--ink:#fff0ef;--muted:#d3aeb1;--ivory:#fff3f0}
+html[data-discipline="biology"]{--gold:#8fca8c;--mint:#b5deb0;--line:#365f45;--panel:#142c21;--panel2:#1c3d2b;--panel3:#27523a;--ink:#ecf8e9;--muted:#acc8b1}
+html[data-discipline="chemistry"]{--gold:#8ed8df;--mint:#a5e0e7;--line:#315b66;--panel:#112b34;--panel2:#173c48;--panel3:#235361;--ink:#e8f7fb;--muted:#a8cbd4}
+html[data-discipline="physics"]{--gold:#b8a1ff;--mint:#c7b5ff;--line:#55436d;--panel:#211a33;--panel2:#302346;--panel3:#42315e;--ink:#f2edff;--muted:#c6b6d9}
+html[data-discipline="medicine"] body{background:#170e12}
+html[data-discipline="biology"] body{background:#091c13}
+html[data-discipline="chemistry"] body{background:#081e29}
+html[data-discipline="physics"] body{background:#151124}
+html[data-discipline] .sidebar,html[data-discipline] .topbar,html[data-discipline] .rail{background:var(--panel)}
+html[data-discipline] .panel,html[data-discipline] .card,html[data-discipline] .rail-card{background:var(--panel2);border-color:var(--line)}
+html[data-discipline] .navbtn.active{background:var(--panel3);color:var(--ink)}
+html[data-discipline] .goldbtn{background:var(--gold);color:#15191b}
+html[data-discipline] .gold,html[data-discipline] .eyebrow,html[data-discipline] .navlabel,html[data-discipline] .micro{color:var(--gold)}
+html[data-theme="light"][data-discipline="medicine"]{--bg:#fff6f4;--panel:#fff;--panel2:#fff3f2;--panel3:#ffe0df;--line:#e7b9b9;--ink:#3e1721;--muted:#81535b;--ivory:#411f27;--gold:#b82e43}
+html[data-theme="light"][data-discipline="biology"]{--bg:#f2f9ed;--panel:#fff;--panel2:#e8f5e5;--panel3:#d3ebd1;--line:#b5d4b5;--ink:#163824;--muted:#477056;--ivory:#173e27;--gold:#286d3d}
+html[data-theme="light"][data-discipline="chemistry"]{--bg:#f0f9fc;--panel:#fff;--panel2:#e6f5fa;--panel3:#d1ebf3;--line:#b3d5df;--ink:#153844;--muted:#46717c;--ivory:#143a47;--gold:#146c84}
+html[data-theme="light"][data-discipline="physics"]{--bg:#f7f3ff;--panel:#fff;--panel2:#efe9fc;--panel3:#e1d6f7;--line:#cdbde9;--ink:#31204d;--muted:#6b5988;--ivory:#33204f;--gold:#6743aa}
+html[data-theme="light"][data-discipline] body{background:var(--bg);color:var(--ink)}
+html[data-theme="light"][data-discipline] .sidebar,html[data-theme="light"][data-discipline] .topbar,html[data-theme="light"][data-discipline] .rail{background:var(--panel);color:var(--ink);border-color:var(--line)}
+html[data-theme="light"][data-discipline] .panel,html[data-theme="light"][data-discipline] .card,html[data-theme="light"][data-discipline] .rail-card{background:var(--panel2);color:var(--ink);border-color:var(--line)}
+html[data-theme="light"][data-discipline] .navbtn,html[data-theme="light"][data-discipline] .navbtn.active,html[data-theme="light"][data-discipline] .card h3{color:var(--ink)}
+html[data-theme="light"][data-discipline] .navbtn.active{background:var(--panel3)}
+html[data-theme="light"][data-discipline] .linebtn{color:var(--ink);border-color:var(--line);background:var(--panel2)}
+html[data-theme="light"][data-discipline] .muted,html[data-theme="light"][data-discipline] .lead,html[data-theme="light"][data-discipline] .card p{color:var(--muted)}
+html[data-theme="light"][data-discipline] .goldbtn{background:var(--gold);color:white}
+.theme-discipline-picker{max-width:150px;background:var(--panel2);color:var(--ink);border:1px solid var(--line);padding:10px;border-radius:10px;font-weight:700}
+.modalroot.editor-fullscreen{padding:0;align-items:stretch}
+.modalroot.editor-fullscreen .modalbox{max-height:100vh!important;height:100vh;width:100vw!important;max-width:100vw!important;border-radius:0;overflow:auto}
+.modalroot.editor-fullscreen .doc-canvas-wrap{max-height:none;min-height:70vh;overflow:visible}
+.modalroot.editor-fullscreen .doc-paper{max-width:1120px;margin:auto;min-height:75vh}
+.feed-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.67}
+.feed-motion-layer{position:absolute;inset:0;background:linear-gradient(90deg,#081c1dd9,transparent 80%)}
+.feed-motion-layer .science-motion{opacity:.72}
+@media(max-width:760px){.theme-discipline-picker{max-width:104px;padding:8px 4px;font-size:11px}.modalroot.editor-fullscreen .doc-paper{padding:28px 17px}}
